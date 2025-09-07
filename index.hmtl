@@ -1,0 +1,77 @@
+<!-- file: index.html -->
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hello World — Trang HTML5</title>
+
+  <!-- Basic CSS -->
+  <style>
+    :root{
+      --bg:#0f172a;
+      --card:#0b1220;
+      --accent:#60a5fa;
+      --muted:#94a3b8;
+      --glass: rgba(255,255,255,0.03);
+    }
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+    body{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(96,165,250,0.07), transparent 20%),
+        linear-gradient(180deg,#071024 0%, #071228 100%);
+      color: white;
+    }
+
+    .card{
+      width:min(820px,94%);
+      padding:2.4rem;
+      border-radius:14px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      border:1px solid rgba(255,255,255,0.04);
+      backdrop-filter: blur(6px);
+    }
+
+    h1{margin:0 0 .6rem;font-size:2.1rem;letter-spacing:-0.02em;}
+    p.lead{margin:0 0 1.2rem;color:var(--muted);}
+    .btn{
+      display:inline-block;padding:.55rem .9rem;border-radius:8px;text-decoration:none;font-weight:600;
+      border: none; cursor:pointer;
+      background: linear-gradient(90deg,var(--accent), #3b82f6);
+      color: #04263b;
+    }
+
+    footer{margin-top:1.2rem;font-size:.85rem;color:var(--muted)}
+    .meta{margin-top:1rem;color:var(--muted);font-size:.92rem;}
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Hello, World!</h1>
+    <p class="lead">Đây là một trang HTML5 tĩnh mẫu. Mở file này bằng trình duyệt hoặc dùng Live Server trong VS Code để xem kết quả.</p>
+
+    <div>
+      <button class="btn" id="greetBtn">Hiển thị thông báo</button>
+      <span class="meta" id="timeStamp" style="margin-left:1rem"></span>
+    </div>
+
+    <footer>
+      <small>File: <code>index.html</code> · Tĩnh, không cần server. Có thể deploy lên GitHub Pages hoặc Netlify.</small>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('greetBtn').addEventListener('click', function(){
+      alert('Hello, World! — từ trang HTML5 tĩnh của bạn 🎉');
+    });
+
+    // Hiển thị thời gian tải trang
+    const now = new Date();
+    document.getElementById('timeStamp').textContent = 'Mở lúc: ' + now.toLocaleString();
+  </script>
+</body>
+</html>
