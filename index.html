@@ -74,7 +74,7 @@
 
 		<!-- header_section - start
 		================================================== -->
-		<header class="header_section sticky_header primary_header clearfix">
+		<!-- <header class="header_section sticky_header primary_header clearfix">
 			<div class="primary_header_content clearfix">
 				<div class="brand_logo">
 					<a href="index.html">
@@ -92,16 +92,7 @@
 					</ul>
 				</div>
 
-				<div id="menu-placeholder"></div>
-				<script>
-					// Load menu từ file menu.html
-					fetch("menu.html")
-						.then(res => res.text())
-						.then(html => document.getElementById("menu-placeholder").innerHTML = html)
-						.catch(err => console.error("Không tải được menu:", err));
-				</script>
-
-				<!-- <nav class="main_menu clearfix">
+				<nav class="main_menu clearfix">
 					<ul class="ul_li_center clearfix">
 						<li class="active has_child">
 							<a href="#!">Home</a>
@@ -117,7 +108,7 @@
 						<li class="has_child">
 							<a href="#!">Tin tức</a>
 							<ul class="submenu">
-								<li><a href="blog_grid.html">Blog Grid xxx</a></li>
+								<li><a href="blog_grid.html">Blog Grid</a></li>
 								<li><a href="blog_standard.html">Blog Standard</a></li>
 								<li><a href="blog_details.html">Blog Details</a></li>
 							</ul>
@@ -129,7 +120,7 @@
 							</button>
 						</li>
 					</ul>
-				</nav> -->
+				</nav>
 
 				<div class="header_hotline bg_gray clearfix">
 					<div class="item_icon">
@@ -154,7 +145,17 @@
 					</div>
 				</div>
 			</div>
-		</header>
+		</header> -->
+
+		<div id="header-placeholder"></div>
+		<script>
+		// Load menu từ file menu.html
+		fetch("header.html")
+			.then(res => res.text())
+			.then(html => document.getElementById("header-placeholder").innerHTML = html)
+			.catch(err => console.error("Không tải được menu:", err));
+		</script>
+
 		<!-- header_section - end
 		================================================== -->
 
